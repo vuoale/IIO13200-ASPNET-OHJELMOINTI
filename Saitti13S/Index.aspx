@@ -14,6 +14,7 @@
         <h2>5.9.2013</h2>
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ShowPhotos.aspx">Show Photos</asp:HyperLink>
         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ShowCustomers.aspx">Show WineCustomers</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/BranchTest.aspx">Test branch</asp:HyperLink>
     </div>
     </form>
 </body>
