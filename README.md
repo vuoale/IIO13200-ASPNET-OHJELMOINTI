@@ -1,14 +1,15 @@
-Teht‰v‰ 1
+ViikkotehtÔøΩvÔøΩ 
 ======
 
-Tiedon V‰litt‰minen
+Viikkoteht√§vien palauttamisesta
 ====
-
-Oppimistavoite: Oppia v‰litt‰‰ tietoa eri tavoilla samassa tai eri sovelluksissa olevan webbisivujen v‰lill‰.
-
-Tee seuraavanlainen kaksi sivua sis‰lt‰v‰ sovellus, jossa ensimm‰isell‰ sivulla kysyt‰‰n k‰ytt‰j‰n nimi
-Annettuaan nimen k‰ytt‰j‰ voi siirty‰ (kolmella eri tavalla) sivulle valuuttamuunnin2, jossa h‰n voi tehd‰ valuuttamuunnoksen.
-Sivulla k‰ytt‰j‰‰ tervehdit‰‰n kuten kuvasta n‰kyy.
-
-![Alt text](/images/vk0teht.png "kuva")
+Viikkoteht√§v√§t kukin tekee itsen√§isesti kotona/koulussa... Motto: tekem√§ll√§ oppii!
+   
+Palauta ne seuraavasti:
+- Opintojakson alussa kloonaa GitHubista Master Repo IIO13200-NET-OHJELMOINTI koneellesi paikalliseksi Repoksi.
+- Tee uusi branch omalla ASIOID-tunnuksella paikalliseen Repoon.
+-  Tee teht√§v√§. Testaa ett√§ toimii ja laatu ok.
+-  Jos homma tehty oikein niin Commitoi paikalliseen Repoosi.
+-  lopuksi Pushaa branchisi takaisin GitHubin Master Repoon.
+![Alt text](/images/kuva.png "kuva")
 
