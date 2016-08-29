@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Secret WineCustomers</title>
+    <title>Salaiset ViiniAsiakkaamme SQl Serveriltä</title>
     <link href="CSS/demo.css" rel="stylesheet" />
 </head>
 <body>

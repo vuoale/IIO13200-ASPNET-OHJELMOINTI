@@ -19,9 +19,11 @@ public partial class ShowCustomers : System.Web.UI.Page
     {
       int lkm = 0;
       //get data from SQL Server and write it to HTML
-      tulokset.InnerHtml = "<h1>Our secret loppahuuli-customers: </h1>";
-      //looppi jossa InnerHtmlää kasvatetaan
-      DataTable dt = new DataTable("asiakkaat");
+      tulokset.InnerHtml = "<h1>Salaiset loppahuuli-asiakkaat </h1>";
+
+    //looppi jossa InnerHtmlää kasvatetaan
+    tulokset.InnerHtml += "<div>";
+    DataTable dt = new DataTable("asiakkaat");
       SqlDataAdapter da = new SqlDataAdapter("SELECT Firstname, Lastname, City FROM customer", connStr);
       da.Fill(dt);
       foreach (DataRow rivi in dt.Rows)
@@ -29,8 +31,9 @@ public partial class ShowCustomers : System.Web.UI.Page
         tulokset.InnerHtml += string.Format("{0} {1} {2} </br>", rivi[0], rivi[1], rivi[2]);
         lkm++;
       }
-      //lopputekstit
-      tulokset.InnerHtml += string.Format("<h2> {0} customers listed from database </h2>", lkm);
+    tulokset.InnerHtml += "</div>";
+    //lopputekstit
+    tulokset.InnerHtml += string.Format("<h2> {0} customers listed from database </h2>", lkm);
 
     }
 }
