@@ -1,4 +1,4 @@
-Opintojaksonv IIO13200 iikkotehtävät 
+Opintojakso IIO13200 
 ======
 
 Demo Saitti
