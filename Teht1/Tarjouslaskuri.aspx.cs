@@ -23,21 +23,39 @@ public partial class Tarjouslaskuri : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        kate = Int32.Parse(ConfigurationManager.AppSettings["kate"]);
-        lasinNelioHinta = Int32.Parse(ConfigurationManager.AppSettings["lasinNelioHinta"]);
-        alumiiniKarminJuoksumetriHinta = Int32.Parse(ConfigurationManager.AppSettings["alumiiniKarminJuoksumetriHinta"]);
-        tyoMenekki = Int32.Parse(ConfigurationManager.AppSettings["tyoMenekki"]);
+        try
+        {
+            kate = Int32.Parse(ConfigurationManager.AppSettings["kate"]);
+            lasinNelioHinta = Int32.Parse(ConfigurationManager.AppSettings["lasinNelioHinta"]);
+            alumiiniKarminJuoksumetriHinta = Int32.Parse(ConfigurationManager.AppSettings["alumiiniKarminJuoksumetriHinta"]);
+            tyoMenekki = Int32.Parse(ConfigurationManager.AppSettings["tyoMenekki"]);
+        }
+        catch (Exception ex)
+        {
+            lblAla.Text = ex.Message;
+            lblKarmi.Text = ex.Message;
+            lblHinta.Text = ex.Message;
+        }
     }
 
     protected void btnLaske_Click(object sender, EventArgs e)
     {
-        ikkunaLeveys = float.Parse(txtIkkunaLeveys.Text);
-        ikkunaKorkeus = float.Parse(txtIkkunaKorkeus.Text);
-        karmiLeveys = float.Parse(txtKarmiLeveys.Text);
+        try
+        {
+            ikkunaLeveys = float.Parse(txtIkkunaLeveys.Text);
+            ikkunaKorkeus = float.Parse(txtIkkunaKorkeus.Text);
+            karmiLeveys = float.Parse(txtKarmiLeveys.Text);
 
-        lblAla.Text = LaskeAla();
-        lblKarmi.Text = LaskePiiri();
-        lblHinta.Text = LaskeHinta();
+            lblAla.Text = LaskeAla();
+            lblKarmi.Text = LaskePiiri();
+            lblHinta.Text = LaskeHinta();
+        }
+        catch (Exception ex)
+        {
+            lblAla.Text = ex.Message;
+            lblKarmi.Text = ex.Message;
+            lblHinta.Text = ex.Message;
+        }
     }
 
     private string LaskeAla()
@@ -48,13 +66,13 @@ public partial class Tarjouslaskuri : System.Web.UI.Page
 
     private string LaskePiiri()
     {
-        piiri = 2 * ikkunaLeveys + 2 * ikkunaKorkeus;
+        piiri = 2 * ikkunaLeveys + 2 * ikkunaKorkeus - 4 * karmiLeveys;
         return piiri.ToString();
     }
 
     private string LaskeHinta()
     {
-        hinta = (1 + kate) * ((ala * lasinNelioHinta) + (piiri * alumiiniKarminJuoksumetriHinta) + (tyoMenekki));
+        hinta = (1 + kate / 100) * ((ala * lasinNelioHinta) + (piiri * alumiiniKarminJuoksumetriHinta) + (tyoMenekki));
         return hinta.ToString();
     }
 }
