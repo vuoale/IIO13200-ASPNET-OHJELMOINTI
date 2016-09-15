@@ -4,41 +4,60 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Teht1</title>
+    <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <!-- ikkunan leveys -->
-        <p>Ikkunan leveys:
-        <asp:TextBox ID="txtIkkunaLeveys" runat="server"></asp:TextBox>
-        </p>
-
-        <!-- ikkunan korkeus -->
-        <p>Ikkunan korkeus:
-        <asp:TextBox ID="txtIkkunaKorkeus" runat="server"></asp:TextBox>
-        </p>
-
-        <!-- karmipuun leveys -->
-        <p>Karmipuun leveys:
-        <asp:TextBox ID="txtKarmiLeveys" runat="server"></asp:TextBox>
-        </p>
-
-        <p>
-        <asp:Button ID="btnLaske" runat="server" Text="Laske tarjoushinta" OnClick="btnLaske_Click" />
-        </p>
-
-        <p>Ikkunan pinta-ala:
-        <asp:Label ID="lblAla" runat="server" Text="tulos1"/>
-        </p>
-
-        <p>Karmin piiri:
-        <asp:Label ID="lblKarmi" runat="server" Text="tulos2"/>
-        </p>
-
-        <p>Tarjoushinta
-        <asp:Label ID="lblHinta" runat="server" Text="tulos3"/>
-        </p>
+    <div class="w3-container w3-light-green">
+        <h2>Ikkunan dimensiot</h2>
+        <table>
+            <tr>
+                <td>Ikkunan leveys:</td>
+                <td>
+                    <asp:TextBox ID="txtIkkunaLeveys" runat="server"></asp:TextBox>
+                </td>
+                <td> mm</td>
+            </tr>
+            <tr>
+                <td>Ikkunan korkeus:</td>
+                <td>
+                    <asp:TextBox ID="txtIkkunaKorkeus" runat="server"></asp:TextBox>
+                </td>
+                <td> mm</td>
+            </tr>
+            <tr>
+                <td>Karmipuun leveys:</td>
+                <td>
+                    <asp:TextBox ID="txtKarmiLeveys" runat="server"></asp:TextBox>
+                </td>
+                <td> mm</td>
+            </tr>
+        </table>
+        <asp:Button ID="btnLaske" class="w3-btn w3-blue" runat="server" Text="Laske tarjoushinta" OnClick="btnLaske_Click" />
+        <table>
+            <tr>
+                <td>Ikkunan pinta-ala</td>
+                <td>
+                    <asp:Label ID="lblAla" runat="server" Text=""/>
+                </td>
+                <td> m2</td>
+            </tr>
+            <tr>
+                <td>Karmin piiri</td>
+                <td>
+                    <asp:Label ID="lblKarmi" runat="server" Text=""/>
+                </td>
+                <td> m</td>
+            </tr>
+            <tr>
+                <td>Tarjoushinta</td>
+                <td>
+                    <asp:Label ID="lblHinta" runat="server" Text=""/>
+                </td>
+                <td> €</td>
+            </tr>
+        </table>
     </div>
     </form>
 </body>

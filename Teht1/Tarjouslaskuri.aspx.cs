@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
 
 public partial class Tarjouslaskuri : System.Web.UI.Page
 {
@@ -16,19 +17,19 @@ public partial class Tarjouslaskuri : System.Web.UI.Page
     float piiri;
     float hinta;
 
-    int kate;
-    int lasinNelioHinta;
-    int alumiiniKarminJuoksumetriHinta;
-    int tyoMenekki;
+    float kate;
+    float lasinNelioHinta;
+    float alumiiniKarminJuoksumetriHinta;
+    float tyoMenekki;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
-            kate = Int32.Parse(ConfigurationManager.AppSettings["kate"]);
-            lasinNelioHinta = Int32.Parse(ConfigurationManager.AppSettings["lasinNelioHinta"]);
-            alumiiniKarminJuoksumetriHinta = Int32.Parse(ConfigurationManager.AppSettings["alumiiniKarminJuoksumetriHinta"]);
-            tyoMenekki = Int32.Parse(ConfigurationManager.AppSettings["tyoMenekki"]);
+            kate = float.Parse(ConfigurationManager.AppSettings["kate"]);
+            lasinNelioHinta = float.Parse(ConfigurationManager.AppSettings["lasinNelioHinta"]);
+            alumiiniKarminJuoksumetriHinta = float.Parse(ConfigurationManager.AppSettings["alumiiniKarminJuoksumetriHinta"]);
+            tyoMenekki = float.Parse(ConfigurationManager.AppSettings["tyoMenekki"]);
         }
         catch (Exception ex)
         {
@@ -42,13 +43,22 @@ public partial class Tarjouslaskuri : System.Web.UI.Page
     {
         try
         {
-            ikkunaLeveys = float.Parse(txtIkkunaLeveys.Text);
-            ikkunaKorkeus = float.Parse(txtIkkunaKorkeus.Text);
-            karmiLeveys = float.Parse(txtKarmiLeveys.Text);
+            if (txtIkkunaLeveys.Text.Length * txtIkkunaKorkeus.Text.Length * txtKarmiLeveys.Text.Length > 0)
+            {
+                ikkunaLeveys = float.Parse(txtIkkunaLeveys.Text);
+                ikkunaKorkeus = float.Parse(txtIkkunaKorkeus.Text);
+                karmiLeveys = float.Parse(txtKarmiLeveys.Text);
 
-            lblAla.Text = LaskeAla();
-            lblKarmi.Text = LaskePiiri();
-            lblHinta.Text = LaskeHinta();
+                lblAla.Text = LaskeAla();
+                lblKarmi.Text = LaskePiiri();
+                lblHinta.Text = LaskeHinta();
+            }
+            else
+            {
+                lblAla.Text = "Jokin kenttä tyhjä.";
+                lblKarmi.Text = "Jokin kenttä tyhjä.";
+                lblHinta.Text = "Jokin kenttä tyhjä.";
+            }
         }
         catch (Exception ex)
         {
@@ -60,19 +70,19 @@ public partial class Tarjouslaskuri : System.Web.UI.Page
 
     private string LaskeAla()
     {
-        ala = ikkunaLeveys * ikkunaKorkeus;
+        ala = (ikkunaLeveys / 1000) * (ikkunaKorkeus / 1000);
         return ala.ToString();
     }
 
     private string LaskePiiri()
     {
-        piiri = 2 * ikkunaLeveys + 2 * ikkunaKorkeus - 4 * karmiLeveys;
+        piiri = 2 * ((ikkunaLeveys / 1000) + (ikkunaKorkeus / 1000));
         return piiri.ToString();
     }
 
     private string LaskeHinta()
     {
-        hinta = (1 + kate / 100) * ((ala * lasinNelioHinta) + (piiri * alumiiniKarminJuoksumetriHinta) + (tyoMenekki));
-        return hinta.ToString();
+        hinta = (1 + kate) * ((ala * lasinNelioHinta) + (piiri * alumiiniKarminJuoksumetriHinta) + (tyoMenekki));
+        return hinta.ToString("C2", CultureInfo.CreateSpecificCulture("fi-Fi"));
     }
 }
