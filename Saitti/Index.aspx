@@ -24,6 +24,11 @@
                 Esimerkki kuinka koodissa rakennetaan HTML:ää
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ShowCustomers.aspx">Show WineCustomers</asp:HyperLink>
             </p>
+            <h2>To 22.9.2016</h2>
+            <h3>Tiedon välitys sivulta toiselle:</h3>
+            <p>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Source.aspx">Tiedon välitys 6 tapaa</asp:HyperLink>
+            </p>
         </div>
     </form>
 </body>
