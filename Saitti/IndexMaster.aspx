@@ -24,9 +24,10 @@
             <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Source.aspx">Tiedon välitys 6 tapaa</asp:HyperLink>
         </p>
         <h2>To 29.9.2016</h2>
-        <h3>Responsiivinen sivu:</h3>
         <p>
-            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/FordMustang.aspx">Ford Mustang</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/FordMustang.aspx">Responsiivinen sivu</asp:HyperLink><br />
+            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/MoviesFromXML.aspx">Movies XML</asp:HyperLink><br />
+            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/MoviesFromSQL.aspx">Movies SQL</asp:HyperLink>
         </p>
     </div>
 </asp:Content>
