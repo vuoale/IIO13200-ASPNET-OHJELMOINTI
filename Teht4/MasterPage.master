@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <img src="Images/iio13200.png" /><br />
+        <asp:ContentPlaceHolder id="body" runat="server">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
