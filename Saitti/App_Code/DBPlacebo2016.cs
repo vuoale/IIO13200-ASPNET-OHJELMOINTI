@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using MySql.Data.MySqlClient;
 
 namespace JAMK.ICT.Data
 {
@@ -45,6 +46,30 @@ namespace JAMK.ICT.Data
             viesti = ex.Message;
             throw;
         }
+    }
+    public static DataTable GetDataFromMysql(string cs)
+    {
+            //haetaan labranetin mysql:tä
+            try
+            {
+                string sql = "SELECT tunnus, sukunimi, etunimi, osoite, puhnro, email FROM henkilot ORDER BY tunnus";
+                using (MySqlConnection conn = new MySqlConnection(cs))
+                {
+                    conn.Open(); //avaa yhteyden mysql-serverille
+                    //command-tyyppinen olio
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
     }
   }
 }

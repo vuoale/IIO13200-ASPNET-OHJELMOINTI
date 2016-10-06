@@ -86,6 +86,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht3", "Teht3\", "{1AB7E8F
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "55877"
+		SlnRelativePath = "Teht3\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -107,6 +108,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht4", "Teht4\", "{02439D2
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "27380"
+		SlnRelativePath = "Teht4\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
