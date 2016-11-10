@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<palautteet>
+  <palaute>
+    <pvm>10.11.2016</pvm>
+    <tekija>Olli Oppilas</tekija>
+    <kurssi>ASP.NET</kurssi>
+    <opittu>Koodausta</opittu>
+    <haluanoppia>Lisää koodausta</haluanoppia>
+    <hyvaa>Kaikki</hyvaa>
+    <parannettavaa>Ei ole</parannettavaa>
+    <muuta>Blaah</muuta>
+  </palaute>
+  <palaute>
+    <pvm>10.11.2016</pvm>
+    <tekija>Testaaja</tekija>
+    <kurssi>Ohjelmisto testaus</kurssi>
+    <opittu>Testausta</opittu>
+    <haluanoppia>Lisää testausta</haluanoppia>
+    <hyvaa>Testaus on hauskaa</hyvaa>
+    <parannettavaa>Ei ole</parannettavaa>
+    <muuta>
+    </muuta>
+  </palaute>
+</palautteet>
