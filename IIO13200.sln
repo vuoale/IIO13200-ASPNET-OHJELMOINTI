@@ -112,18 +112,18 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht4", "Teht4\", "{02439D2
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht5", "Teht5\", "{CEB899E1-83FF-4989-BE7D-A98D1E7FD4B4}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht9", "Teht9\", "{CEB899E1-83FF-4989-BE7D-A98D1E7FD4B4}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_55967"
-		Debug.AspNetCompiler.PhysicalPath = "Teht5\"
+		Debug.AspNetCompiler.PhysicalPath = "Teht9\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55967\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_55967"
-		Release.AspNetCompiler.PhysicalPath = "Teht5\"
+		Release.AspNetCompiler.PhysicalPath = "Teht9\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55967\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
@@ -200,6 +200,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht7", "Teht7\", "{7BA0596
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Teht5", "Teht5\", "{BBBC9337-68D4-4476-BD48-4D1E4A9C3C4C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60799"
+		Debug.AspNetCompiler.PhysicalPath = "Teht5\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60799\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60799"
+		Release.AspNetCompiler.PhysicalPath = "Teht5\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60799\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60799"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -242,6 +263,10 @@ Global
 		{7BA0596B-0D5B-42CE-9D9E-DCB300AE0A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BA0596B-0D5B-42CE-9D9E-DCB300AE0A24}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BA0596B-0D5B-42CE-9D9E-DCB300AE0A24}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BBBC9337-68D4-4476-BD48-4D1E4A9C3C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBC9337-68D4-4476-BD48-4D1E4A9C3C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBC9337-68D4-4476-BD48-4D1E4A9C3C4C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBC9337-68D4-4476-BD48-4D1E4A9C3C4C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
